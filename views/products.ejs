@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>  
+    <h1>PRODUCT LIST</h1>
+    <div class="content">
+        <% if(result.length>0){ %>
+            <% result.forEach((products) => { %>
+                <h4 class="prod_id">Product ID: <%= products.prod_id %></h4>
+                <h4 class="prod_name">Product Name: <%= products.prod_name %></h4>
+                <p class="prod_desc">Product details: <%= products.prod_desc %></p>
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>
